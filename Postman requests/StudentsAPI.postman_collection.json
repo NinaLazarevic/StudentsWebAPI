@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "9acecb54-9094-422c-aa8c-c875e1d21ca7",
+		"name": "StudentsAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:63138/api/students",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get existing student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:63138/api/students/4fae5b85-addc-4f79-9056-68d729d7d079",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"4fae5b85-addc-4f79-9056-68d729d7d079"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get non existing student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:63138/api/students/710a08b9-071d-4c6c-b18e-1b9f14341c7d",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"710a08b9-071d-4c6c-b18e-1b9f14341c7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:63138/api/students/e294cabb-b915-4a2e-8c37-c3c9bead9153",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"e294cabb-b915-4a2e-8c37-c3c9bead9153"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete non existing student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:63138/api/students/32fd5789-c706-405c-b05e-8d9f355c363b",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"32fd5789-c706-405c-b05e-8d9f355c363b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"bcb0660a-7e07-407d-8707-caf48b0439a4\",\r\n    \"firstName\": \"Maja\",\r\n    \"lastName\": \"Bojkovic\",\r\n    \"jmbg\": \"0408982736103\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:63138/api/students/",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change existing student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": \"8f8fb006-e6b9-4cb3-8480-ad629be7cdcb\",\r\n        \"firstName\": \"Miljan\",\r\n        \"lastName\": \"Vasiljevic\",\r\n        \"jmbg\": \"0605993672933\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:63138/api/students/8f8fb006-e6b9-4cb3-8480-ad629be7cdcb",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"8f8fb006-e6b9-4cb3-8480-ad629be7cdcb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change non existing student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"2f604bdf-0d1e-4a22-94de-8a91f8252717\",\r\n        \"firstName\": \"Nina\",\r\n        \"lastName\": \"Lazarevic\",\r\n        \"jmbg\": \"3110995845622\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:63138/api/students/2f604bdf-0d1e-4a22-94de-8a91f8252717",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"2f604bdf-0d1e-4a22-94de-8a91f8252717"
+					]
+				},
+				"description": "Change non existing student with false id in request url and in request body"
+			},
+			"response": []
+		},
+		{
+			"name": "Change non existing student ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"4fae5b85-addc-4f79-9056-68d729d7d079\",\r\n        \"firstName\": \"Nina\",\r\n        \"lastName\": \"Lazarevic\",\r\n        \"jmbg\": \"3110995845622\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:63138/api/students/2f604bdf-0d1e-4a22-94de-8a91f8252717",
+					"host": [
+						"localhost"
+					],
+					"port": "63138",
+					"path": [
+						"api",
+						"students",
+						"2f604bdf-0d1e-4a22-94de-8a91f8252717"
+					]
+				},
+				"description": "Change non existing student with false id in request url and true id in request body"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
