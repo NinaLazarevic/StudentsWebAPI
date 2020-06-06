@@ -1,0 +1,28 @@
+﻿@model List<StudentsWebAPI.Data.Models.StudentModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>All students</h2>
+
+<div class="align-self-center">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Full name</th>
+                <th>JMBG</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.FirstName @student.LastName</td>
+                    <td>@student.JMBG</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

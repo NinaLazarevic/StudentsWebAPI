@@ -53,7 +53,15 @@ namespace StudentsWebAPI.Web
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //Adding static file middleware
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
